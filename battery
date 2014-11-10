@@ -1,0 +1,5 @@
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E percentage > /var/www/abc.temp
+#more /sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:01/PNP0C09:00/PNP0C0A:00/power_supply/BAT0/capacity > /var/www/abc.temp
+cut -c 26-29 /var/www/abc.temp
+#more /var/www/abc.temp
+rm /var/www/abc.temp
